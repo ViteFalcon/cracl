@@ -1,1 +1,4 @@
 version: "0.0.1"
+login_servers:
+  - name: localhost
+    endpoint: "127.0.0.1:6900"
