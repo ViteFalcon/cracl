@@ -53,8 +53,8 @@ fn main() {
 }
 
 fn load_config(mut state: ResMut<State>) {
-    let config_yaml = fs::read_to_string("assets/cracl.cfg").expect("Failed to load config file");
-    state.config = serde_yaml::from_str(&config_yaml).unwrap();
+    let config_yaml = fs::read_to_string("assets/cracl.yaml").expect("Failed to load config file");
+    state.config = serde_yaml::from_str(&config_yaml).expect("Failed to parse config file");
 }
 
 fn load_bgm(mut state: ResMut<State>, asset_server: Res<AssetServer>, audio: Res<Audio>) {
